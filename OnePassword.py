@@ -55,7 +55,7 @@ class OnePassword:
 
         In the event that tat you are calling for a single object this will throw an Error if the object is not present.
         You can catch that if your program can handle this being missing.
-        
+
         :param input_command: Customization of the command.
         :return: The json object returned as a dictionary.
         """
@@ -71,12 +71,13 @@ class OnePassword:
         except JSONDecodeError as exc:
             NotImplementedError("The object is not present in the dictionary.")
 
+
 if __name__ == '__main__':
-    in_subdomain = "startoni"
-    in_session = "9bRYLZIessCh5PJNlI71sR0AnPNv8AgBNwXFmpbGWhM"
-    in_vault = "Archive"
+    in_subdomain = ""
+    in_session = ""
+    in_vault = ""
 
     op = OnePassword(in_subdomain, in_session, in_vault)
     op.get_all_items_in_vault()
     op.get_item_by_id("ipnpxfrsznczrdebfr2mnpovri")
-    op.get_item_by_name("Blurb")
+    op.get_item_by_name("Test_id")
