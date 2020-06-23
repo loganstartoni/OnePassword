@@ -7,6 +7,9 @@ debug = True
 
 
 class OnePassword:
+    """
+        Used to Initialize an application with secrets. Without setting them locally in environment variables.
+    """
     _vault: str
     _op_session: str
 
